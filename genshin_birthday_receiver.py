@@ -7,7 +7,7 @@ g=requests.get(get_url,headers={"Cookie":cookie}).json()
 print(g)
 r=g["data"]['role']
 for i in r:
-    if i["is_partake"]==True:
+    if i["is_partake"]==False:
         t=requests.post(url,str({"role_id":int(i['role_id'])}).replace("'",'"'),headers=
         {"Cookie":cookie,
         "Content-Type": "application/json;charset=UTF-8",
