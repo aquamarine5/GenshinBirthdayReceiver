@@ -5,7 +5,8 @@ name: Python application
 
 on:
   schedule:
-    - cron: "0 12 10 3 *"
+    - cron: "0 12 14 3 *" # Jean
+    - cron: "0 12 21 3 *" # Nuoaier
   workflow_dispatch:
 
 jobs:
