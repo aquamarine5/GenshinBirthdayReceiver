@@ -5,8 +5,6 @@ name: GithubBirthdayScheduleTasks
 
 on:
   schedule:
-    - cron: "0 12 14 3 *" # Jean
-    - cron: "0 12 21 3 *" # Nuoaier
     - cron: "0 0 * * *"
   workflow_dispatch:
 
@@ -24,15 +22,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Run GenshinBirthdayReceiver with --forced-indexed
+    - name: Run GenshinBirthdayReceiver
       env:
         COOKIE: ${{ secrets.COOKIE }}
         UID: ${{ secrets.UID }}
       run : python genshin_birthday_receiver.py --forced-indexed
-      if: github.event_name == 'workflow_dispatch'
-    - name: Run GenshinBirthdayReceiver by calendar
-      env:
-        COOKIE: ${{ secrets.COOKIE }}
-        UID: ${{ secrets.UID }}
-      run : python genshin_birthday_receiver.py
-      if: github.event_name == 'schedule'
