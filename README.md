@@ -7,6 +7,8 @@
 - 去Python Application的Action点击Run workflow即可
 ## 使用须知！
 - 米游社可能会封号，不知道会不会
-- 新活动，没准后期会改api，如果有记得踢我一脚（issue or pr please~）
+- 新活动，没准后期会改api，如果有记得踢我一脚（issue or pr please）
+## ps:
 - 今日（3/3）七七生日B站竟然不是送椰奶
-- 明天是我生日今天下午却要返校（气）
+- 明天（3/4）是我生日今天下午却要返校（气）
+- 申鹤生日（3/10）成功用Actions离线领取了生日相册
