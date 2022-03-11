@@ -5,6 +5,9 @@
 - Fork本仓库，去Setting/Secrets添加COOKIE和UID两个secrets
 - 去Action打开Fork Repo的Action权限
 - 去Python Application的Action点击Run workflow即可
+## 关于脚本：
+- `--forced-indexed` 会强制尝试获取当前生日列表并领取，如果没有此标识会优先获取生日日历判断今天是不是角色的生日
+- `--use-locals` 会使用Repo下的[calendar.json](calendar.json)进行查找日历，没有则默认从服务器获取
 ## 使用须知！
 - 米游社可能会封号，不知道会不会
 - 新活动，没准后期会改api，如果有记得踢我一脚（issue or pr please）
