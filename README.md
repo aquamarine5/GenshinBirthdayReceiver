@@ -7,7 +7,7 @@
 - 去Python Application的Action点击Run workflow即可
 
 <details>
-<summary>查看更加详细的教程</summary>
+<summary>👀 查看更加详细的教程</summary>
   
   
 ### 1. 点击右上角的 Fork 按钮
