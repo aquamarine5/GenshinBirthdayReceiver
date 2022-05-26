@@ -1,5 +1,5 @@
 # GenshinBirthdayReceiver
-*本人UID：140309417，欢迎加好友玩~*  
+> *本人UID：140309417，欢迎加好友玩~*  
 > 作者是住校学生，一周回一次，看到新活动是和生日有关的就想做一个自动领名片的程序，因为那些通常有效期只有1天，说干就干开Fiddler和VSCode写了两三分钟就通了，放Github Actions里面了  
 ## 如何使用？
 - Fork本仓库，去Setting/Secrets添加COOKIE和UID两个secrets
