@@ -25,7 +25,7 @@
 - 添加一个名为***COOKIE***（必须全大写）的Secrets，内容为刚才复制的Cookies
 - 再添加一个名为***UID***的Secrets，内容为原神用户Uid
 
-![1649507038_1_.png](https://s2.loli.net/2022/04/09/EYVaXvuBFx9gH1J.png)
+![image.png](https://s2.loli.net/2022/05/26/sjyL8KJSldBCgxr.png)
 ### 4.再次点击上方的Action
 - 点击绿色按钮  ***I understand my workflows, go ahead and enable them***
 ![1649506736.png](https://s2.loli.net/2022/04/09/ZapToF4lhjEIKxu.png)  
