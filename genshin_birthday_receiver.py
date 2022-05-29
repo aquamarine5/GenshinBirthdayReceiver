@@ -8,6 +8,8 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 cookie = os.environ["COOKIE"]
 uid = os.environ["UID"]
+print(cookie)
+print(uid)
 get_url = "https://hk4e-api.mihoyo.com/event/birthdaystar/account/index?lang=zh-cn&uid=%s&region=cn_gf01&activity_id=20220301153521" % uid
 url = "https://hk4e-api.mihoyo.com/event/birthdaystar/account/post_my_draw?lang=zh-cn&uid=%s&region=cn_gf01&activity_id=20220301153521" % uid
 calendar = "https://hk4e-api.mihoyo.com/event/birthdaystar/account/calendar?lang=zh-cn&uid=140309417&region=cn_gf01&activity_id=20220301153521&year=2023"
