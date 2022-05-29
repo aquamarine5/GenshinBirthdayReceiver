@@ -11,8 +11,9 @@
 - 等待刷新并自动跳转至新页面
   
 ### 2. 前往 [Mihoyo 米游社](https://bbs.mihoyo.com/ys) 获取Cookie
-- 按`F12`，打开`开发者工具`，找到`Network`并点击
-- 按`F5`刷新页面，按下图复制`Cookie`
+- **如果米游社还未登录，请先登录**
+- 按`F12`，打开`开发者工具`，找到`Network`（或`网络`）并点击
+- 按`F5`刷新页面，找到名为`ys/`的页面（通常是第一个），按照下图拖到复制`Cookie`项
 
 ![cookie](https://i.loli.net/2020/10/28/TMKC6lsnk4w5A8i.png)
 ### 3.添加Secrets
