@@ -4,18 +4,21 @@ import requests
 import os
 import logging
 import datetime
+URL_CALENDAR="https://hk4e-api.mihoyo.com/event/birthdaystar/account/calendar?lang=zh-cn&uid=%s&region=cn_gf01&activity_id=20220301153521&year=2023"
+URL_INDEX="https://hk4e-api.mihoyo.com/event/birthdaystar/account/index?lang=zh-cn&uid=%s&region=cn_gf01&activity_id=20220301153521"
+URL_ROLES="https://api-takumi.mihoyo.com/binding/api/getUserGameRolesByCookieToken?game_biz=hk4e_cn"
+URL_RECEIVE="https://hk4e-api.mihoyo.com/event/birthdaystar/account/post_my_draw?lang=zh-cn&uid=%s&region=cn_gf01&activity_id=20220301153521"
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 cookie = os.environ["COOKIE"]
-uid = os.environ["UID"]
 print(cookie)
-print(uid)
-get_url = "https://hk4e-api.mihoyo.com/event/birthdaystar/account/index?lang=zh-cn&uid=%s&region=cn_gf01&activity_id=20220301153521" % uid
-url = "https://hk4e-api.mihoyo.com/event/birthdaystar/account/post_my_draw?lang=zh-cn&uid=%s&region=cn_gf01&activity_id=20220301153521" % uid
-calendar = "https://hk4e-api.mihoyo.com/event/birthdaystar/account/calendar?lang=zh-cn&uid=140309417&region=cn_gf01&activity_id=20220301153521&year=2023"
 r = requests.Session()
 r.headers["Cookie"] = cookie
 r.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.62"
+uid = r.get(URL_ROLES).json()["data"]["list"][0]["game_uid"]
+get_url = URL_INDEX % uid
+url = URL_RECEIVE % uid
+calendar = URL_CALENDAR%uid
 
 
 def re(r):
@@ -24,12 +27,13 @@ def re(r):
     r = g["data"]['role']
     for i in r:
         if i["is_partake"] == False:
-            t = requests.post(url, str({"role_id": int(i['role_id'])}).replace("'", '"'), 
-                headers={"Cookie": cookie,
-                         "Content-Type": "application/json;charset=UTF-8",
-                         "Referer": "https://webstatic.mihoyo.com/"})
+            t = requests.post(url, str({"role_id": int(i['role_id'])}).replace("'", '"'),
+                              headers={"Cookie": cookie,
+                                       "Content-Type": "application/json;charset=UTF-8",
+                                       "Referer": "https://webstatic.mihoyo.com/"})
             logging.info(f"Received: {t.text}")
             logging.debug(f"成功领取{i['name']}的画册")
+
 
 if "--forced-indexed" in sys.argv:
     re(r)
@@ -39,8 +43,8 @@ else:
     d = 14
     b = f"{m}/{d}"
     if "--use-locals" in sys.argv:
-        with open("calendar.json",encoding="UTF-8") as f:
-            c=json.loads(f.read())
+        with open("calendar.json", encoding="UTF-8") as f:
+            c = json.loads(f.read())
     else:
         c = r.get(calendar).json()
 
