@@ -6,10 +6,7 @@
 - 去Action打开Fork Repo的Action权限
 - 去Python Application的Action点击Run workflow即可
 
-<details>
-<summary>👀 >> 查看更加详细的教程 <<</summary>
-  
-  
+**以下为更为详细的教程：**
 ### 1. 点击右上角的 Fork 按钮
 - 等待刷新并自动跳转至新页面
   
@@ -31,10 +28,14 @@
 - 在 *This workflow has a workflow_dispatch event trigger.* 右侧点击**Run workflow**，branch默认为`main`即可
 ![image.png](https://s2.loli.net/2022/04/09/PvIwmryp7YQZsn1.png)
 - 至此 部署完毕。
-
-
-</details>
-
+  
+## 故障排除：
+- Actions运行出现红叉叉时，点击左侧的`Jobs`->`build`
+- 然后打开`Run GenshinBirthdayReceiver`页
+![image.png](https://s2.loli.net/2022/05/29/LpMuSH8aEtC35ew.png)
+  
+### 遇到了`'message': '当前暂未登录，请登录后重试(-100)'`，怎么办？
+- 请确认在Secrets正确设置了COOKIE，见[此页面](https://github.com/aquamarine5/GenshinBirthdayReceiver#3%E6%B7%BB%E5%8A%A0secrets)
 ## 关于脚本：
 - `--forced-indexed` 会强制尝试获取当前生日列表并领取，如果没有此标识会优先获取生日日历判断今天是不是角色的生日
 - `--use-locals` 会使用Repo下的[calendar.json](calendar.json)进行查找日历，没有则默认从服务器获取
