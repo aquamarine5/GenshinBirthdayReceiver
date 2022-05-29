@@ -32,6 +32,7 @@
 ## 故障排除：
 - Actions运行出现红叉叉时，点击左侧的`Jobs`->`build`
 - 然后打开`Run GenshinBirthdayReceiver`页
+  
 ![image.png](https://s2.loli.net/2022/05/29/LpMuSH8aEtC35ew.png)
   
 ### 遇到了`'message': '当前暂未登录，请登录后重试(-100)'`，怎么办？
