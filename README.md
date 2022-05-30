@@ -41,6 +41,8 @@
   
 ### 遇到了`'message': '当前暂未登录，请登录后重试(-100)'`，怎么办？
 - 请确认在Secrets正确设置了COOKIE，见[此页面](https://github.com/aquamarine5/GenshinBirthdayReceiver#3%E6%B7%BB%E5%8A%A0secrets)
+### 如果遇到了其他的问题，怎么办？
+- 去[Discussions](https://github.com/aquamarine5/GenshinBirthdayReceiver/discussions/new)选择**Q&A**发问题。
 ## Changelog:
 ### 2022/5/29
 - 新版本无需*UID*这一Secret了，现在可以自动获取uid
