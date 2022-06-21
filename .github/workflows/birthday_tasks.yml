@@ -25,5 +25,4 @@ jobs:
     - name: Run GenshinBirthdayReceiver
       env:
         COOKIE: ${{ secrets.COOKIE }}
-        UID: ${{ secrets.UID }}
       run : python genshin_birthday_receiver.py --forced-indexed
