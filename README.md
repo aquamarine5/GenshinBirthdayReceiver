@@ -29,8 +29,10 @@
 - 点击绿色按钮  ***I understand my workflows, go ahead and enable them***
 ![1649506736.png](https://s2.loli.net/2022/04/09/ZapToF4lhjEIKxu.png)  
 - 点击左侧的GenshinBirthdayScheduleTasks
+- 启用GenshinBirthdayScheduleTasks
 - 在 *This workflow has a workflow_dispatch event trigger.* 右侧点击**Run workflow**，branch默认为`main`即可
 ![image.png](https://s2.loli.net/2022/04/09/PvIwmryp7YQZsn1.png)
+- **如需使用KeepActionAlive（默认Action只能够运行90days，启用KeepActionAlive后可一直使用，推荐启用），请点击左侧的KeepActionAlive，并在内启用。**
 - 至此 部署完毕。
   
 ## 故障排除：
