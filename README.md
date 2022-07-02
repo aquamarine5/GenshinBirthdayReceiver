@@ -53,4 +53,8 @@
 - `--use-locals` 会使用Repo下的[calendar.json](calendar.json)进行查找日历，没有则默认从服务器获取
 ## 使用须知！
 - 米游社可能会封号，不知道会不会
-- 新活动，没准后期会改api，如果有记得踢我一脚（issue or pr please）\
+- 新活动，没准后期会改api，如果有记得踢我一脚（issue or pr please）
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/aquamarine5/GenshinBirthdayReceiver.svg)](https://starchart.cc/aquamarine5/GenshinBirthdayReceiver)
